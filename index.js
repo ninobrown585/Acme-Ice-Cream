@@ -70,3 +70,8 @@ app.get("/api/flavors/:id", async (req, res, next) => {
       next(error);
     }
   });
+
+  app.listen(PORT, async () => {
+    await client.connect();
+    console.log(`I am listening on port number ${PORT}`);
+  });

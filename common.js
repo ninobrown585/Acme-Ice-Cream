@@ -1,7 +1,7 @@
 const express = require("express");
 const pg = require("pg");
 const client = new pg.Client(
-  process.env.DATABASE_URL || "postgres://localhost/test_db"
+  "postgres://postgres:nino@localhost:5432/ice_cream_db"
 );
 
 module.exports = { express, client };
